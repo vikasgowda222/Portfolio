@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Gowda S | AI Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Vikas Gowda S - Computer Science Engineer specializing in AI, Machine Learning, and Full-Stack Development. Engineering the future of intelligent systems.">
+    <meta name="keywords" content="AI Engineer, Machine Learning, Full Stack Developer, Python, TensorFlow, React, Node.js">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/effects.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Toggle -->
+    <div class="music-toggle" id="musicToggle">
+        <div class="music-icon">♫</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-brand">
+            <span class="brand-text">VGS</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#journey" class="nav-link">Journey</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="stars-container" id="starsContainer"></div>
+        <div class="neural-network" id="neuralNetwork"></div>
+        <div class="holographic-globe" id="holographicGlobe"></div>
+        
+        <div class="hero-content">
+            <div class="hero-name-container">
+                <h1 class="hero-name" id="heroName">
+                    <span class="glitch-text">VIKAS GOWDA S</span>
+                </h1>
+            </div>
+            <div class="hero-tagline">
+                <span class="typing-text" id="typingText">Engineering Intelligence | AI • ML • Full Stack</span>
+            </div>
+            <div class="hero-cta">
+                <button class="cta-button primary" onclick="scrollToSection('projects')">
+                    <span>View Projects</span>
+                    <div class="button-glow"></div>
+                </button>
+                <button class="cta-button secondary" onclick="downloadResume()">
+                    <span>Download Resume</span>
+                    <div class="button-glow"></div>
+                </button>
+                <button class="cta-button tertiary" onclick="scrollToSection('contact')">
+                    <span>Contact Me</span>
+                    <div class="button-glow"></div>
+                </button>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Career Journey -->
+    <section id="journey" class="journey-section">
+        <div class="section-header">
+            <h2 class="section-title glitch-title">Career Journey</h2>
+            <div class="section-subtitle">Data chambers of my professional evolution</div>
+        </div>
+
+        <div class="journey-container">
+            <div class="journey-item" data-aos="fade-up">
+                <div class="journey-card education-card">
+                    <div class="card-header">
+                        <div class="card-icon">🎓</div>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="card-content">
+                        <h4>B.E. in Computer Science</h4>
+                        <p class="institution">Maharaja Institute of Technology, VTU</p>
+                        <p class="duration">2022 - 2026</p>
+                        <div class="cgpa">
+                            <span class="cgpa-label">CGPA:</span>
+                            <span class="cgpa-value">9.02/10</span>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <div class="journey-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="journey-card internship-card">
+                    <div class="card-header">
+                        <div class="card-icon">💼</div>
+                        <h3>Internship</h3>
+                    </div>
+                    <div class="card-content">
+                        <h4>Python Programming Intern</h4>
+                        <p class="company">Codingmissions IT Solutions</p>
+                        <p class="duration">2025</p>
+                        <div class="internship-details">
+                            <p class="detail-item">• Developed automation scripts using Python and OOP principles</p>
+                            <p class="detail-item">• Built scalable modules for data processing and analysis</p>
+                            <p class="detail-item">• Implemented efficient algorithms for workflow optimization</p>
+                            <p class="detail-item">• Collaborated on real-world software development projects</p>
+                        </div>
+                        <div class="achievements">
+                            <div class="achievement-item">
+                                <span class="metric">30%</span>
+                                <span class="description">Efficiency Gain through Automation</span>
+                            </div>
+                            <div class="achievement-item">
+                                <span class="description">Built OOP-based scalable modules</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+
+            <div class="journey-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="journey-card certifications-card">
+                    <div class="card-header">
+                        <div class="card-icon">🏆</div>
+                        <h3>Certifications</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="certification-badges">
+                            <div class="cert-badge" onclick="openCertModal('ibm')">
+                                <div class="badge-icon">IBM</div>
+                                <span>Data Analysis with Python</span>
+                            </div>
+                            <div class="cert-badge" onclick="openCertModal('google')">
+                                <div class="badge-icon">G</div>
+                                <span>Google Analytics</span>
+                            </div>
+                            <div class="cert-badge" onclick="openCertModal('accenture')">
+                                <div class="badge-icon">A</div>
+                                <span>Software Engineering</span>
+                            </div>
+                            <div class="cert-badge" onclick="openCertModal('fullstack')">
+                                <div class="badge-icon">FS</div>
+                                <span>Full Stack Certification</span>
+                            </div>
+                            <div class="cert-badge" onclick="openCertModal('udemy')">
+                                <div class="badge-icon">U</div>
+                                <span>Python Pro Bootcamp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2 class="section-title glitch-title">Project Universe</h2>
+            <div class="section-subtitle">Interactive 3D showcase of my innovations</div>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-cube" data-project="flight-price">
+                <div class="cube-faces">
+                    <div class="cube-face front">
+                        <div class="project-icon">✈️</div>
+                        <h3>Flight Price Forecasting</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="project-stats">
+                            <div class="stat">R² = 0.84</div>
+                            <div class="stat">96% Accuracy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cube-glow"></div>
+            </div>
+
+            <div class="project-cube" data-project="skillforge-ai">
+                <div class="cube-faces">
+                    <div class="cube-face front">
+                        <div class="project-icon">🤖</div>
+                        <h3>SkillForge AI</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="project-stats">
+                            <div class="stat">40% Score Boost</div>
+                            <div class="stat">100+ Users</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cube-glow"></div>
+            </div>
+
+            <div class="project-cube" data-project="data-viz">
+                <div class="cube-faces">
+                    <div class="cube-face front">
+                        <div class="project-icon">📊</div>
+                        <h3>AI Data Visualizer</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="project-stats">
+                            <div class="stat">NLP Powered</div>
+                            <div class="stat">LLM Integration</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cube-glow"></div>
+            </div>
+
+            <div class="project-cube" data-project="power-management">
+                <div class="cube-faces">
+                    <div class="cube-face front">
+                        <div class="project-icon">⚡</div>
+                        <h3>Smart Power Management</h3>
+                    </div>
+                    <div class="cube-face back">
+                        <div class="project-stats">
+                            <div class="stat">25% Energy Savings</div>
+                            <div class="stat">OpenCV Based</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cube-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Universe -->
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <h2 class="section-title glitch-title">Skill Universe</h2>
+            <div class="section-subtitle">A rotating solar system of my technical expertise</div>
+        </div>
+
+        <div class="skills-solar-system" id="skillsSolarSystem">
+            <div class="central-star">
+                <div class="star-core">AI</div>
+                <div class="star-glow"></div>
+            </div>
+
+            <div class="skill-orbit orbit-1">
+                <div class="skill-planet" data-skill="python">
+                    <span>Python</span>
+                </div>
+            </div>
+
+            <div class="skill-orbit orbit-2">
+                <div class="skill-planet" data-skill="machine-learning">
+                    <span>ML</span>
+                </div>
+                <div class="skill-planet" data-skill="tensorflow">
+                    <span>TensorFlow</span>
+                </div>
+            </div>
+
+            <div class="skill-orbit orbit-3">
+                <div class="skill-planet" data-skill="pytorch">
+                    <span>PyTorch</span>
+                </div>
+                <div class="skill-planet" data-skill="nodejs">
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-planet" data-skill="react">
+                    <span>React</span>
+                </div>
+            </div>
+
+            <div class="skill-orbit orbit-4">
+                <div class="skill-planet" data-skill="flask">
+                    <span>Flask</span>
+                </div>
+                <div class="skill-planet" data-skill="django">
+                    <span>Django</span>
+                </div>
+                <div class="skill-planet" data-skill="sql">
+                    <span>SQL</span>
+                </div>
+                <div class="skill-planet" data-skill="git">
+                    <span>Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="achievements-section">
+        <div class="section-header">
+            <h2 class="section-title glitch-title">Mission Control</h2>
+            <div class="section-subtitle">Achievement dashboard and accolades</div>
+        </div>
+
+        <div class="achievements-dashboard">
+            <div class="achievement-card">
+                <div class="achievement-icon">🎯</div>
+                <div class="achievement-content">
+                    <h3>Academic Excellence</h3>
+                    <p>CGPA 9.02+ consistently maintained</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="90"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">🏆</div>
+                <div class="achievement-content">
+                    <h3>Hackathon Runner-Up</h3>
+                    <p>National-level AI solution competition</p>
+                    <div class="badge-glow"></div>
+                </div>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">⚡</div>
+                <div class="achievement-content">
+                    <h3>Automation Impact</h3>
+                    <p>60% reduction in task completion time</p>
+                    <div class="counter" data-count="60">0</div>
+                    <span class="counter-suffix">% Efficiency Gain</span>
+                </div>
+            </div>
+
+            <div class="achievement-card">
+                <div class="achievement-icon">🚀</div>
+                <div class="achievement-content">
+                    <h3>Projects Deployed</h3>
+                    <p>Successfully launched applications</p>
+                    <div class="counter" data-count="4">0</div>
+                    <span class="counter-suffix">+ Live Projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title glitch-title">Command Center</h2>
+            <div class="section-subtitle">Establish communication protocols</div>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-panel">
+                    <div class="panel-header">
+                        <div class="panel-icon">📧</div>
+                        <h3>Direct Communication</h3>
+                    </div>
+                    <div class="panel-content">
+                        <a href="mailto:vikasgowdas222@gmail.com" class="contact-link">
+                            vikasgowdas222@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-panel">
+                    <div class="panel-header">
+                        <div class="panel-icon">💼</div>
+                        <h3>Professional Network</h3>
+                    </div>
+                    <div class="panel-content">
+                        <a href="https://www.linkedin.com/in/vikas-gowda-s-857591248" class="contact-link" target="_blank">
+                            LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/vikasgowda222" class="contact-link" target="_blank">
+                            GitHub Profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-panel">
+                    <div class="panel-header">
+                        <div class="panel-icon">📄</div>
+                        <h3>Resume Archive</h3>
+                    </div>
+                    <div class="panel-content">
+                        <button class="contact-link" onclick="downloadResume()">
+                            Download Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <button type="submit" class="form-submit">
+                        <span>Transmit Message</span>
+                        <div class="button-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+        <div class="modal-overlay" onclick="closeModal()"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/interactions.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

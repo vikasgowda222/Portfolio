@@ -1,0 +1,468 @@
+/* Glassmorphism Effects */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-2xl);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-2xl);
+}
+
+.glass-teal {
+    background: rgba(20, 184, 166, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    border-radius: var(--border-radius-2xl);
+}
+
+.glass-blue {
+    background: rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: var(--border-radius-2xl);
+}
+
+/* Neon Glow Effects */
+.neon-teal {
+    color: var(--primary-teal);
+    text-shadow: 
+        0 0 5px var(--primary-teal),
+        0 0 10px var(--primary-teal),
+        0 0 20px var(--primary-teal);
+}
+
+.neon-blue {
+    color: var(--secondary-blue);
+    text-shadow: 
+        0 0 5px var(--secondary-blue),
+        0 0 10px var(--secondary-blue),
+        0 0 20px var(--secondary-blue);
+}
+
+.neon-orange {
+    color: var(--accent-orange);
+    text-shadow: 
+        0 0 5px var(--accent-orange),
+        0 0 10px var(--accent-orange),
+        0 0 20px var(--accent-orange);
+}
+
+/* Box Glow Effects */
+.glow-teal {
+    box-shadow: 
+        0 0 10px rgba(20, 184, 166, 0.3),
+        0 0 20px rgba(20, 184, 166, 0.2),
+        0 0 40px rgba(20, 184, 166, 0.1);
+}
+
+.glow-blue {
+    box-shadow: 
+        0 0 10px rgba(59, 130, 246, 0.3),
+        0 0 20px rgba(59, 130, 246, 0.2),
+        0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.glow-orange {
+    box-shadow: 
+        0 0 10px rgba(249, 115, 22, 0.3),
+        0 0 20px rgba(249, 115, 22, 0.2),
+        0 0 40px rgba(249, 115, 22, 0.1);
+}
+
+/* Holographic Effects */
+.holographic {
+    background: linear-gradient(
+        45deg,
+        transparent 33%,
+        rgba(20, 184, 166, 0.3) 33%,
+        rgba(20, 184, 166, 0.3) 66%,
+        transparent 66%
+    ), linear-gradient(
+        -45deg,
+        transparent 33%,
+        rgba(59, 130, 246, 0.3) 33%,
+        rgba(59, 130, 246, 0.3) 66%,
+        transparent 66%
+    );
+    background-size: 20px 20px;
+    animation: holographic-shift 4s ease-in-out infinite;
+}
+
+@keyframes holographic-shift {
+    0%, 100% {
+        background-position: 0 0, 0 0;
+    }
+    25% {
+        background-position: 10px 0, -10px 0;
+    }
+    50% {
+        background-position: 0 10px, 0 -10px;
+    }
+    75% {
+        background-position: -10px 0, 10px 0;
+    }
+}
+
+/* Cyberpunk Grid Effect */
+.cyberpunk-grid {
+    background-image: 
+        linear-gradient(rgba(20, 184, 166, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 184, 166, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    position: relative;
+}
+
+.cyberpunk-grid::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(249, 115, 22, 0.3) 0%, transparent 50%);
+    animation: grid-pulse 6s ease-in-out infinite;
+}
+
+@keyframes grid-pulse {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Particle Effects */
+.particle-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--primary-teal);
+    border-radius: var(--border-radius-full);
+    box-shadow: 0 0 4px var(--primary-teal);
+}
+
+.particle.blue {
+    background: var(--secondary-blue);
+    box-shadow: 0 0 4px var(--secondary-blue);
+}
+
+.particle.orange {
+    background: var(--accent-orange);
+    box-shadow: 0 0 4px var(--accent-orange);
+}
+
+/* 3D Transform Effects */
+.transform-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.rotate-x {
+    transform: rotateX(15deg);
+}
+
+.rotate-y {
+    transform: rotateY(15deg);
+}
+
+.rotate-z {
+    transform: rotateZ(15deg);
+}
+
+.flip-horizontal {
+    transform: rotateY(180deg);
+}
+
+.flip-vertical {
+    transform: rotateX(180deg);
+}
+
+/* Magnetic Button Effect */
+.magnetic-button {
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-fast);
+}
+
+.magnetic-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+}
+
+.magnetic-button:hover::before {
+    transform: translateX(100%);
+}
+
+/* Scan Line Effect */
+.scanline {
+    position: relative;
+    overflow: hidden;
+}
+
+.scanline::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-teal), transparent);
+    animation: scan-line 3s linear infinite;
+}
+
+@keyframes scan-line {
+    0% {
+        top: -10%;
+        opacity: 1;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+/* Energy Border Effect */
+.energy-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(var(--black), var(--black)) padding-box,
+                linear-gradient(45deg, var(--primary-teal), var(--secondary-blue), var(--primary-teal)) border-box;
+}
+
+.energy-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    padding: 2px;
+    background: linear-gradient(45deg, var(--primary-teal), var(--secondary-blue), var(--accent-orange), var(--primary-teal));
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: energy-flow 3s linear infinite;
+}
+
+@keyframes energy-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.matrix-column {
+    position: absolute;
+    top: -100%;
+    color: var(--primary-teal);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 14px;
+    animation: matrix-fall linear infinite;
+}
+
+@keyframes matrix-fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Distortion Effect */
+.distortion {
+    position: relative;
+    overflow: hidden;
+}
+
+.distortion::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(20, 184, 166, 0.03) 2px,
+        rgba(20, 184, 166, 0.03) 4px
+    );
+    animation: distortion-wave 2s ease-in-out infinite;
+}
+
+@keyframes distortion-wave {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+/* Plasma Effect */
+.plasma {
+    background: radial-gradient(circle at 20% 20%, var(--primary-teal) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, var(--secondary-blue) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, var(--accent-orange) 0%, transparent 50%);
+    background-size: 300% 300%;
+    animation: plasma-flow 8s ease-in-out infinite;
+}
+
+@keyframes plasma-flow {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+}
+
+/* Liquid Motion Effect */
+.liquid {
+    background: linear-gradient(-45deg, var(--primary-teal), var(--secondary-blue), var(--accent-orange), var(--primary-teal));
+    background-size: 400% 400%;
+    animation: liquid-gradient 15s ease infinite;
+}
+
+@keyframes liquid-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hover Magnetic Effect */
+.magnetic-hover {
+    transition: transform var(--transition-fast);
+}
+
+.magnetic-hover:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+}
+
+/* Micro-interaction Effects */
+.micro-bounce:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-out;
+}
+
+.micro-shake:hover {
+    animation: micro-shake 0.5s ease-in-out;
+}
+
+@keyframes micro-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+.micro-wobble:hover {
+    animation: micro-wobble 0.6s ease-in-out;
+}
+
+@keyframes micro-wobble {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    75% { transform: rotate(-1deg); }
+}
+
+/* Focus Visible Effects */
+.focus-visible {
+    outline: none;
+}
+
+.focus-visible:focus-visible {
+    outline: 2px solid var(--primary-teal);
+    outline-offset: 2px;
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+}
+
+/* Loading States */
+.loading-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Progress Indicators */
+.progress-ring {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(20, 184, 166, 0.2);
+    border-top: 4px solid var(--primary-teal);
+    border-radius: var(--border-radius-full);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .holographic,
+    .cyberpunk-grid::before,
+    .particle,
+    .scanline::after,
+    .energy-border::before,
+    .matrix-column,
+    .distortion::before,
+    .plasma,
+    .liquid,
+    .loading-shimmer,
+    .progress-ring {
+        animation: none;
+    }
+}
